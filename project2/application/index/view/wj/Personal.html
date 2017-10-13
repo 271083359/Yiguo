@@ -1,0 +1,809 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>易果生鲜_全球精选</title>
+        <meta charset="utf-8">
+
+
+        <link rel="stylesheet" type="text/css" href="__FRON__css/personal.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/index.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/Profile.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/Safe.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/myyiguo.css">
+          <script type="text/javascript" src="__STATIC__/js/jquery-3.2.1.min.js"></script>
+          <style type="text/css" media="screen">
+
+             div .btn-org:hover{
+
+                color:#FFF;
+
+            }
+
+
+          </style>
+    </head>
+    <body>
+    <div class="w">
+     <!--     <div class="popout soldOut-poput">
+        <div class="popout-wrap">
+            <div class="popout-con">
+                <div class="title"><i></i>提 示</div>
+                <div class="con">
+                    <h1>您设置了该商品到货通知！</h1>
+                    <p>
+                        我们会将到货通知信息及时发送到您的邮箱：<br> <a href="#"><u>Xushun@yiguo.com</u></a> <a href="#" target="_blank">修改邮箱</a>
+                    </p>
+                    <div class="btnbox"><a class="confirm" href="javascript:">确  认</a><a class="cancel" href="javascript:">取  消</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="popout-bg">&nbsp;</div>
+    </div>
+ -->
+
+    <div class="site-nav">
+        <div class="wrap">
+            <ul class="fl">
+                <li>欢迎光临易果生鲜</li>
+            </ul>
+
+            <ul class="fr">
+                <li class="TEL">
+                    <a rel="nofollow" href="#" target="_blank">
+                        <i></i>提货券入口
+
+                    </a>
+                </li>
+                <li class="pay">
+                    <a rel="nofollow" href="#" target="_blank">
+                        <i></i>储值卡
+                    </a>
+
+                </li>
+                <li class="mobile">
+                    <div class="tit">
+                        <a href="javascript:void(0)">
+                            <i></i>手机易果
+                            <s></s>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <div class="item">
+                            <img src="__FRON__imgs/qrcode_app.jpg">
+                            <span>扫一扫下载APP</span>
+                        </div>
+                        <div class="item">
+                            <img src="__FRON__imgs/qrcode_wechat.jpg">
+                            <span>易果生鲜微信</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="myyiguo">
+                    <div class="tit">
+                        <a href="" rel="nofollow" target="_blank">
+                            <i></i>我的易果<s id="mob"></s>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <a href="" rel="nofollow" target="_blank">我的订单</a>
+                        <a href="" rel="nofollow" target="_blank">我的优惠券<b id="coupon">0</b></a>
+                        <a href="" rel="nofollow" target="_blank">我的收藏</a>
+                        <a href="" rel="nofollow" target="_blank">我的悠币</a>
+                        <a href="" rel="nofollow" target="_blank">我的退换货</a>
+                        <a href="" rel="nofollow" target="_blank">预存款查询</a>
+                        <a href="" rel="nofollow" target="_blank">立即充值</a>
+                        <a href="" rel="nofollow" target="_blank">退出</a>
+                    </div>
+
+                </li>
+                <li id="_logout" style="display: none;">
+                    <a href="" class="logout">[退出]</a>
+
+                </li>
+                <li id="_loginname" style="display: none;">
+                    <a rel="nofollow" href=""></a>
+                </li>
+                <li id="_register">
+                    <a rel="nofollow" href="">[注册]</a>
+                </li>
+                <li id="_login">
+                    <a rel="nofollow" href="">[登录]</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="header clearfix">
+        <div class="wrap">
+
+            <div class="logo">
+                <a href="http://localhost/project2/public/"></a>
+            </div>
+            <div class="search" style="position: relative;">
+                <div class="search-bar clearfix">
+                    <input type="text" id="keyword" name="keyword" class="search-input" value="输入商品名／编号／拼音" onfocus=" if (this.value == '输入商品名／编号／拼音') {this.value = '';this.style.color = '#000';} " onblur=" if (this.value == '') {this.value = '输入商品名／编号／拼音';this.style.color = '#999';} " style="color: rgb(153, 153, 153);">
+                    <input class="search-btn" type="submit" value="搜索" style="text-align: center;">
+                </div>
+                <ul class="hide" id="shelper" style="display: none;"></ul>
+                <div class="search-keywords" id="keywords">
+                    <!--需动态-->
+                    <a href="#" class="hot" target="_blank">牛排</a>
+                    <a href="#" target="_blank">虾仁</a>
+                    <a href="#" class="hot" target="_blank">鳕鱼</a>
+                </div>
+
+            </div>
+            <div class="shopping-cart">
+                <dl>
+                    <dt class="shopping-btn">
+                        <a href="#">
+                            <span class="totleNum">
+                                <b>0</b>
+                                <!--动态-->
+                            </span>
+                            <b class="totlePrice">0.0</b>
+                            <!--动态-->
+                        </a>
+                    </dt>
+                    <dd class="shopping-list" style="display: none;">
+                        <div class="spacer"></div>
+                        <div class="nogoods" style="display: block;">
+                            购物车中还没有商品，赶紧选购吧！
+                        </div>
+                        <div class="goods" style="display: none;">
+                            <p id="deliveryType" style="display: none;">满100元包邮！</p>
+                            <ul>
+                                <li>
+                                    <div class="l">
+                                        <a href="" target="_blank">
+                                            <img src="__FRON__imgs/9288708060947123_500.jpg" width="42" height="42">
+                                        </a>
+                                    </div>
+                                    <div class="c">
+                                        <a href="">民维羊肉片</a>
+                                    </div>
+                                    <div class="r">
+                                        <b>¥88.80</b>
+                                        * 1
+                                        <a href="javascript:;" onclick="dels(sp1)"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="price-total">
+                                <div>
+                                    <span class="totleNum">
+                                        共<b>1</b>件商品
+                                    </span>
+                                    <span>
+                                        共计<b class="totlePrice">¥88.80</b>
+                                    </span>
+                                </div>
+                                <div>
+                                    <a href="" class="settleup">去购物车</a>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="header-nav">
+        <div class="wrap">
+            <div class="catalogs">
+                <div class="catalogs-title">
+                    <a href="javascript:;">全部商品分类▼</a>
+                </div>
+                <div class="catalogs-list" id="_categry">
+                    <div class="item">
+                        <h3 class="t02_channelhome">
+                            <a href="">
+                                <i></i>国产水果<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">国产水果</a>
+                            </h4>
+                            <div class="sub-list">
+
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763379517.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t05_channelhome">
+                            <a href="">
+                                <i></i>精选肉类<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">精选肉类</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">羊肉</a>
+                                <a href="" target="_blank">香肠</a>
+                                <a href="" target="_blank">火腿/培根</a>
+                                <a href="" target="_blank">肉制品</a>
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763445053.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t06_channelhome">
+                            <a href="">
+                                <i></i>禽类蛋品<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">禽类蛋品</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">鸡</a>
+                                <a href="" target="_blank">鸭</a>
+                                <a href="" target="_blank">鹅/鸽/特色禽类</a>
+                                <a href="" target="_blank">蛋</a>
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763510589.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t04_channelhome">
+                            <a href="">
+                                <i></i>海鲜水产<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">海鲜水产</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">鱼</a>
+                                <a href="" target="_blank">三文鱼</a>
+                                <a href="" target="_blank">虾</a>
+                                <a href="" target="_blank">蟹</a>
+                                <a href="" target="_blank">贝</a>
+                                <a href="" target="_blank">活鲜</a>
+                                <a href="" target="_blank">海产干货</a>
+                                <a href="" target="_blank">特色海产</a>
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763576125.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t08_channelhome">
+                            <a href="">
+                                <i></i>乳品糕点<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">乳品糕点</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">面包</a>
+
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763641661.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t10_channelhome">
+                            <a href="">
+                                <i></i>方便速食<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">方便速食</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">冷冻点心</a>
+                                <a href="" target="_blank">西式主食</a>
+                                <a href="" target="_blank">中式主食</a>
+                                <a href="" target="_blank">火锅料</a>
+                                <a href="" target="_blank">冷藏熟食</a>
+                                <a href="" target="_blank">半成品菜</a>
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160763838269.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="t07_channelhome">
+                            <a href="">
+                                <i></i>粮油杂货<s>></s>
+                            </a>
+                        </h3>
+                        <div class="sub-item">
+                            <h4>
+                                <a href="">粮油杂货</a>
+                            </h4>
+                            <div class="sub-list">
+                                <a href="" target="_blank">米</a>
+                                <a href="" target="_blank">杂粮</a>
+                                <a href="" target="_blank">面/面制品</a>
+                                <a href="" target="_blank">油</a>
+                                <a href="" target="_blank">调味料</a>
+                                <a href="" target="_blank">干货</a>
+                                <a href="" target="_blank">果干/零食</a>
+                            </div>
+                            <div class="catalogs-ad">
+                                <a href="">
+                                    <img src="__FRON__imgs/9570160757940029.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-items">
+                <ul id="homenav">
+                    <li>
+                        <a href="" target="_blank">优质生活</a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">活动专区</a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">菜谱专栏</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<div class="nav-item">
+
+</div>
+
+
+<div class="wrap">
+                    <!--面包屑-->
+                <div class="crumbs" style="margin-top:30px; "><a class="ml0" href="#">首页</a>&gt;<a href="/Trade/Index" class="j_ygnav">我的易果</a>
+
+
+                </div>
+            <div class="content myyg">
+                    <div class="sub">
+                        <div class="menu j_menu">
+                            <dl>
+                                <dt>交易信息</dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="/Trade/OrderList">我的订单</a></li>
+                                        <li><a href="/Trade/MyCoupons">我的优惠券</a><span class="num">1</span></li>
+                                        <li><a href="/Trade/UMoney">我的悠币</a></li>
+
+                                        <li><a href="/Trade/UseGiftCard">我的礼品卡</a></li>
+                                        <li><a href="/Trade/OnlineDelivery">我的提货券</a></li>
+                                        <li><a href="/Trade/MyBuy">购买过的商品</a></li>
+                                        <li><a href="/Trade/MyCollection">我的收藏</a></li>
+                                        <li><a href="/Trade/CommodityVote">评论商品</a></li>
+                                    </ul>
+                                </dd>
+                                <dt>账号信息</dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="/Account/Balance">账户余额</a></li>
+                                        <li>
+                                            <a href="/Account/PersonalProfile">个人资料</a>
+                                                <img style="height: 19px; width: 20px; margin-left: 10px;" src="__FRON__imgs/icon-gift.png" />
+                                        </li>
+                                        <li><a href="/Account/AccountSecurity">账号安全</a></li>
+                                        <li><a href="/Account/Consignee">收货地址管理</a></li>
+                                        <li><a href="/B2BWelfare/CorporationAccount">企业福利入口</a></li>
+
+
+
+                                    </ul>
+                                </dd>
+                                <dt>售后服务</dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="/Trade/BackOrder">在线退换货</a></li>
+                                        <li><a href="/Trade/Advice">投诉建议</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <!-- <div class="ad" style="height: 308px;">
+                                <a href="#" target="_blank"><img src="./imgs/ad.jpg" width="194" height="308"></a>
+                            </div> -->
+                        </div>
+                    </div>
+
+ <!-- 个人资料 -->
+<div class="main">
+
+<style>
+     i{background-image:none;}
+</style>
+<div class="user-info   clearfix">
+    <div class="info-lcol">
+    {volist name="err" id="err"}
+
+        <div class="u-pic">
+            <img alt="用户头像" src="__STATIC__/imgs/{$err.photo}" style="width:90px;height:90px;">
+            <div class="mask"></div>
+        </div>
+        <div class="info-m">
+            <div class="u-name">
+                <a class="name" href="../Account/PersonalProfile" target="_blank">{$err.name}</a><a class="modify " href="../Account/PersonalProfile">修改</a>
+            </div>
+            <div class="u-level">
+                <div class="vip">
+                    <div class="grade"><i></i>易果生鲜普通用户</div>
+                    <div class="grade-line"><span><i style="width:0%"></i></span></div>
+                </div>
+<!--
+                            <a class="vip-info" href="#">查看会员等级制度<i class="ml5" style="display: none;"><img src="http://img06.yiguoimg.com/e/web/170315/00941/154425/icon-new.png"></i></a> -->
+
+            </div>
+        </div>
+        <div class="u-safe">
+            <div class="safe-rank">账户安全等级:<b>中</b><a href="../Account/AccountSecurity">提升</a></div>
+
+            <div class="tel"><i></i>手机:<a href="../Account/AccountSecurity" id="phone">{$err.phone}</a></div>
+            {if $err.email==null}
+            <div class="e-mail"><i></i>邮箱: <a href="../Account/AccountSecurity">未绑定</a></div>
+
+            {else}
+            <div class="e-mail"><i></i>邮箱: <a href="../Account/AccountSecurity">{$err.email}</a></div>
+
+            {/if}
+        </div>
+        <div class="info-line"></div>
+    </div>
+    <div class="info-rcol">
+        <ul class="acco-info">
+            <li class="balance">
+                <h4><i></i>账户余额</h4>
+                <div class="num"><b title="¥{$err.money}">¥{$err.money}</b></div>
+                <div><a href="#">充值</a></div>
+            </li>
+            <li class="yb">
+                <h4><i></i> 悠币</h4>
+                <div class="num"><b>{$err.youbi}</b></div>
+                <div><a href="#">兑换</a></div>
+            </li>
+            <li class="coupons">
+                <h4><i></i>优惠券</h4>
+                <div class="num"><b>{$err.youhui}</b></div>
+                <div><a href="/Trade/MyCoupons">查看</a></div>
+            </li>
+            <li class="gift-cards">
+                <h4><i></i>礼品卡</h4>
+                <div class="num"><b>{$err.lipinka}</b></div>
+                <div><a href="/Trade/UseGiftCard">绑定</a></div>
+            </li>
+        </ul>
+    </div>
+    {/volist}
+</div>
+    <script type="text/javascript" >
+
+    var i = $('#phone').html();
+    var mtel = i.substr(0,3)+'****'+i.substr(7);
+    $('#phone').text(mtel);
+
+    </script>
+
+<!-- <script type="text/javascript">
+    var nowDate = new Date();
+    var nowTime = nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1) + "-" + nowDate.getDate();
+    var endTime = "2017-5-16";
+    if (ToDate(nowTime) > ToDate(endTime)) {
+        $('.u-level .ml5').hide();
+    }
+
+    function ToDate(str) {
+        var arr = str.split("-");
+        var newDate = new Date(arr[0], arr[1], arr[2]);
+        return newDate;
+    }
+</script> --><div class="mod-order clearfix">
+    <div class="table-title"><h3>我的订单</h3><a class="all" href="../Trade/OrderList">查看全部订单</a></div>
+    <table id="orderlst" class="">
+        <tbody>
+        {volist name="frr" id="frr"}
+
+
+            <tr class="j_product">
+            <td width="145" class="al">订单编号:<b>{$frr.ddbh}</b><div class="date">{$frr.data|date="Y-m-d",###}</div></td>
+            <td width="385" class="al">
+                <a href="#" target="_blank"><img class="j_product_img" src="__STATIC__/imgs/{$frr.img}"></a>
+                <span>共计{$frr.num}件商品</span>
+            </td>
+            <td width="105">{$frr.consignee}</td>
+            <td width="105">￥{$frr.pay_money}<br>支付宝</td>
+            {if $frr.zt == 0}
+            <td width="105">待支付</td>
+
+            <td width="97" class="operate">
+            <div>
+                <a class="btn-org" href="">立即支付</a>
+            </div>
+            <div>
+                <a class="btn-org" href="">修改支付</a>
+
+            </div>
+            <div>
+                    <a target="_blank" href="#">查看详情</a>
+            </div>
+             <div>
+                    <a href="javascript:void(0)" class="btn-buy">取消购买</a>
+            </div>
+
+            {elseif $frr.zt==1}
+            <td width="105">已取消</td>
+            <td width="105">
+                <div>
+                    <a target="_blank" href="#">查看详情</a>
+                </div>
+                <div>
+                    <a href="javascript:void(0)" class="btn-buy">再次购买</a>
+                </div>
+            </td>
+
+
+            {else}
+            <td width="105">已支付</td>
+            <td width="105">
+                <div>
+                    <a target="_blank" href="#">查看详情</a>
+                </div>
+                <div>
+                    <a href="javascript:void(0)" class="btn-buy">再次购买</a>
+                </div>
+            </td>
+
+            {/if}
+
+           <!--  <div>
+                    <a target="_blank" href="#">查看详情</a>
+                </div>
+                <div>
+                    <a href="javascript:void(0)" class="btn-buy">再次购买</a>
+                </div> -->
+
+
+
+            </td>
+        </tr>
+    {/volist}
+    </tbody>
+    </table>
+
+</div><div class="mod-buy clearfix">
+    <div class="table-title"><h3>我购买过的商品</h3><a class="all" href="../Trade/MyBuy">查看全部商品</a></div>
+    <table id="historylst" class="j_product">
+        <thead>
+            <tr>
+                <th width="360">商品</th>
+                <th width="150">单价</th>
+                <th width="150">购买次数</th>
+                <th width="150">商品状态</th>
+                <th width="130">操作</th>
+            </tr>
+        </thead>
+
+    {volist name="grr" id="grr"}
+
+
+            <tr class="j_product">
+
+            <td width="360" class="al">
+
+            <a href="#" target="_blank" style="float: left;">
+            <img class="j_product_img" src="__STATIC__/imgs/{$frr.img}">
+
+            </a>
+
+            <div class="date" style="float: left; margin-top: 30px;">
+            <a href="#" target="_blank">{$grr.shop}</a>
+            <br/>
+            订单编号:<b>{$grr.ddbh}</b><br/>{$frr.data|date="Y-m-d",###}
+
+            </div>
+            </td>
+            <td width="150">￥{$grr.pay_money}</td>
+            <td width="150">{$grr.pay_num}</td>
+            <td width="150">售卖中</td>
+            <td width="150">
+             <div>
+                <a href="#">查看详情</a>
+                </div>
+                <div>
+                 <a href="#">删除记录</a>
+                </div>
+            </td>
+            </tr>
+            {/volist}
+    </table>
+        {if $grr==0}
+        <tbody>
+
+        <div class="order-none">亲爱的易果用户，您目前尚无记录呦～<a href="#">快去逛逛吧</a>～</div>
+        </tbody>
+        {/if}
+
+</div>
+
+<!--选择取消原因弹框-->
+<div class="popup popup1" style="display:none;">
+    <div class="popup-wrap popup-middle">
+        <div class="popup-con">
+            <div class="title">取消订单申请 <a href="#" class="close">×</a></div>
+            <div class="con">
+                <div class="reason">
+                    <span>取消原因</span>
+
+                    <select name="refundreason" id="refundreason">
+                        <option value="订单信息错误">订单信息错误</option>
+                        <option value="我不想买了">我不想买了</option>
+                        <option value="忘记使用U币/优惠券">忘记使用U币/优惠券</option>
+                        <option value="订单中有商品买错">订单中有商品买错</option>
+                    </select>
+                    <p class="text"><i class="hint"></i>订单被成功取消后不可恢复，同时该笔订单所使用的优惠券可能将一并取消。</p>
+                </div>
+                <div class="btnbox"><a class="confirm" id="step1" href="javascript:void(0);">下一步</a><a class="cancel close" href="javascript:void(0);">暂不取消</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bg">&nbsp;</div>
+</div>
+
+<!--网银支付宝支付,部分预付款-->
+<div class="popup popup3" style="display:none;">
+    <div class="popup-wrap popup-middle">
+        <div class="popup-con">
+            <div class="title">取消订单申请 <a href="#" class="close">×</a></div>
+            <div class="con">
+                <div class="refundbeforeinfo"></div>
+                <div class="btnbox"><a class="confirm" id="step2" href="javascript:void(0);">提交申请</a><a class="cancel close" href="javascript:void(0);">暂不取消</a></div>
+                <div class="explain">
+                    <h3>极速退款说明：</h3>
+                    <p>
+                        1. 极速退款仅限网银、支付宝在线方式支付，即时退款至预付款余额，目前暂不支持其他支付方式；<br>
+                        2. 极速退款已退至账户余额后的金额，目前暂不支持退款；<br>
+                        3. 账户内金额不可用于购买储值卡、提货券等虚拟卡券类商品；<br>
+                        4. 如需开具发票，请完善发票开具信息；开票金额为您实际支付充值金额，不包含赠送金额；<br>
+                        5. 预付款余额有效期：自充值日起至用完即止；<br>
+                        6. 若有其他疑问，可拨打客服电话400-000-7788进行咨询。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bg">&nbsp;</div>
+</div>
+
+<!--等待审核-->
+<div class="popup popup4" style="display:none;">
+    <div class="popup-wrap popup-middle">
+        <div class="popup-con">
+            <div class="title">取消订单申请 <a href="#" class="close">×</a></div>
+            <div class="con">
+                <div class="refundstateinfo"></div>
+                <table>
+
+                </table>
+                <div class="btnbox"><a class="confirm close" href="javascript:void(0);">好，我知道了</a><a href="http://www.yiguo.com/help/quicknessrefund.html" class="know">了解极速退款</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bg">&nbsp;</div>
+</div>
+
+
+
+
+
+
+</div>
+
+    <div class="footer">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="#">账户注册</a></p>
+                <p><a href="#">购物流程</a></p>
+                <p><a href="#">订购方式</a></p>
+                <p><a href="#">悠币说明</a></p>
+                            <p><a href="#">会员等级<i class="ml5" style="display: none;"><img src="__FRON__imgs/icon-new.png"></i></a></p>
+
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="#">支付方式</a></p>
+                <p><a href="#">充值说明</a></p>
+                <p><a href="#">优惠代码/礼品卡说明</a>
+                </p><p><a href="#">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="#">配送运费</a></p>
+                <p><a href="#">配送范围</a></p>
+                <p><a href="#">配送时间</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="#">退换货政策</a></p>
+                <p><a href="#">退换货流程</a></p>
+                <p><a href="#">常见问题</a></p>
+                <p><a href="#">投诉与建议</a></p>
+                <p><a href="#">极速退款</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">业务合作</a></p>
+                <p><a href="#">诚信举报</a></p>
+                <p><a href="#" target="_blank" rel="nofollow">人才招聘</a></p>
+
+            </dd>
+        </dl>
+        <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+        <div class="copyright">
+            <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+            <p>版权所有<a href="#">上海易果电子商务有限公司</a>  2005-2017 Copyright @ 2005-2017 _www.yiguo.com, All rights reserved 沪ICP备09008015号<br><br></p>
+            <p class="authentication">
+                <a href="#" target="_blank" rel="nofollow"><img src="__FRON__imgs/153685368061665897_121x29.png" style="height:29px;"></a>
+                <a href="#" target="_blank"><img src="__FRON__imgs/footer_copy.gif" width="47px" height="47px"></a>
+                <a href="#">
+                    <img src="__FRON__imgs/picp_bg.png" alt="#" border="0">
+                    <span>310100102001</span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+    </body>
+
+        <script type="text/javascript" charset="utf-8" src="__STATIC__/js/public.js"></script>
+
+</html>

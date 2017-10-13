@@ -1,0 +1,327 @@
+*{
+    margin:0px;
+    padding:0px;
+
+}
+.header {
+    background: #e0e0e0;
+    margin-bottom:10px;
+}
+body {
+    color: #444;
+    background: #fff;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.clearfix:after, .wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.logo a {
+    display: block;
+    width: 145px;
+    height: 50px;
+    background: url(../imgs/logo.png) no-repeat left top;
+}
+a {
+    cursor: pointer;
+}
+a {
+    color: #444;
+    text-decoration: none;
+    outline: none;
+}
+.header .wrap {
+    height: 58px;
+    padding: 15px 0 5px 0;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 60px;
+}
+.logo {
+    float: left;
+}
+.steps {
+    float: right;
+    padding-top: 20px;
+    margin-right: 40px;
+   /* min-width:1355px;*/
+}
+.steps ul{
+    float:left;
+}
+.steps li {
+    position: relative;
+    float: left;
+    list-style:none;
+}
+.steps li b {
+    background: url(../imgs/order-step.png) no-repeat;
+    width: 36px;
+    height: 36px;
+    display: block;
+    float: left;
+}
+.steps .on .b1 {
+    background-position: 0 -44px;
+}
+.steps li .b1 {
+    background-position: 0 0;
+}
+.steps li span {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    right: -62px;
+    color: #333;
+}
+.steps .on span {
+    color: #008842;
+}
+.steps li i {
+    width: 165px;
+    height: 6px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0;
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-right: 0;
+    overflow: hidden;
+}
+.steps li .b2 {
+    background-position: -42px 0;
+}
+.steps li .b3 {
+    background-position: -84px 0;
+}
+.steps .on .b2 {
+    background-position: -42px -44px;
+}
+.steps .on i {
+    border-color: #008842;
+    background: #008842;
+}
+.PickUpCard .c{
+ border: 1px solid #e3e6e0;
+ border-top:1px solid #008842;
+ background:#fff;
+}
+.PickUpCard .c dt{
+    display:block;
+    zoom:1;
+    padding:25px 55px;
+    font: bold 24px/51px Microsoft YaHei;
+    color:#008842;
+    border-bottom:1px solid #e3e6e0;
+    background:#fbfdf6;
+}
+.PickUpCard .c i{
+    width:68px;
+    height:68px;
+    margin-right:20px;
+    background:url(../imgs/confirmpay_icon.png) no-repeat left;
+
+}
+.PickUpCard .c i.i1{
+    background-position:-72px 0;
+}
+.PickUpCard .c i.i2{
+    background-position:0 0;
+}
+.PickUpCard .c dd{
+    padding:40px 145px;
+    font-size:16px;
+}
+.PickUpCard .c li{
+    display:block;
+    zoom:1;
+    padding:15px 0;
+    border-bottom:1px dashed #e3e6e0;
+}
+.PickUpCard .c li.noborder{
+    border-bottom:none;
+}
+.PickUpCard .c img{
+    vertical-align:middle;
+}
+.PickUpCard .c span{
+    padding-right:30px;
+}
+.PickUpCard .c .price{
+    color:#e8380d;
+}
+.PickUpCard .c a{
+    color:#008842;
+    border-bottom:1px solid #008842;
+    _border-bottom:none;
+}
+.PickUpCard .c .edit{
+    *display:inline-block;
+    *height:20px;
+    *line-height:20px;
+    color:#008842;
+    border-bottom:1px solid #008842;
+    _border-bottom:none;
+}
+.PickUpCard .c .edit i{
+    width:12px;
+    height:12px;
+    _height:45px;
+    margin-right:5px;
+    background:url(../imgs/icon_edit.png) no-repeat center;
+}
+.PickUpCard .c .tip{
+    padding:20px 145px;
+    font-size:14px;
+    line-height:26px;
+    border-top:1px solid #e3e6e0;
+    background:#f7f7f7;
+}
+.PickUpCard .c .tip b{
+    display:block;
+    font-size:18px;
+    font-weight:normal;
+    ont-family:Microsoft YaHei;
+}
+.PickUpCard .c .tip i{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:24px;
+    height:22px;
+    margin-right:5px;
+    background:url(../imgs/PickUpCard.png) no-repeat -285px -180px;
+}
+.PickUpCard .c .btn-org{
+    width:180px;
+    height:45px;
+    text-align:center;
+    margin-top:15px;
+    color:#fff;
+    border-bottom:none;
+    font: bold 18px/40px microsoft yahei;
+}
+.PickUpCard .c .btn-org span{
+    margin-left:5px;
+    padding-right:0;
+    font-size:16px;
+}
+.PickUpCard .c .input input{
+    width: 200px;
+    padding:5px 10px;
+    border: solid 1px #e0e0e0;
+    line-height: 2;
+}
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+i,s{
+    display:inline-block;
+    vertical-align:middle;
+}
+.btn-org {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #e8380d;
+    background: #e8380d;
+}
+.j_paybtn:hover{
+
+    text-decoration:none;
+    opacity:0.7;
+}
+.footer dl {
+    width: 190px;
+    float: left;
+    margin-left: 50px;
+    display: inline;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    line-height:10px;
+}
+
+dt {
+    display: block;
+}
+dd {
+    display: block;
+    -webkit-margin-start: 15px;
+    padding-left: 15px;
+    /*border-left: 1px dashed #444;*/
+
+}
+.footer dl dt {
+    height: 23px;
+    line-height: 23px;
+    background: url(../imgs/footer_icon.png) no-repeat;
+    font-size: 14px;
+    text-indent: 40px;
+}
+.footer dl dd a {
+    color: #575556;
+    line-height: 10px;
+}
+.footer dl dd a:hover {
+    color:#008842;
+}
+.footer .col1 dt {
+    background-position: 0 0;
+}
+.footer .col2 dt {
+    background-position: 0 -23px;
+}
+.footer .col3 dt {
+    background-position: 0 -46px;
+}
+.footer .col4 dt {
+    background-position: 0 -69px;
+}
+.footer .col5 dt {
+    background-position: 0 -92px;
+}
+.footer .service {
+    clear: both;
+    text-align: center;
+    padding: 40px 0 20px;
+    color: #008842;
+    font-size: 14px;
+}
+.footer .copyright {
+    clear: both;
+    color: #717171;
+    text-align: center;
+    line-height: 22px;
+}
+.footer .copyright a {
+    color: #717171;
+}
+.footer .copyright a:hover {
+    color: #008842;
+}
+.footer .copyright {
+    clear: both;
+    color: #717171;
+    text-align: center;
+    line-height: 22px;
+}

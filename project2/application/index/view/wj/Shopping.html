@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>购物车-易果网</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="__FRON__js/jquery-3.2.1.js"></script>
+        <script src="__FRON__js/shopAjax.js" type="text/javascript" charset="utf-8" ></script>
+        <link rel="stylesheet" type="text/css" href="__FRON__css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/yg.css">
+    </head>
+    <body>
+
+    <div class="nav">
+    <div class="wrap">
+        <ul class="fl">
+            <li>欢迎光临易果生鲜！</li>
+        </ul>
+             <ul class="fr">
+
+            <li class="myyiguo">
+                <div class="tit"><a href="#" target="_blank"><i class=" glyphicon glyphicon-user"></i>我的易果<s></s></a></div>
+                <div class="con">
+                    <a href="#">我的订单</a>
+                    <a href="#">退出</a>
+                </div>
+            </li>
+                <li><a href="#">[注册]</a></li><li><a href="#">[登录]</a></li>
+
+        </ul>
+
+    </div>
+    </div>
+
+        <!-- 头部  -->
+        <div class="header clearfix">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="#" target="_blank">
+
+                    </a>
+
+                </div>
+                <div class="steps">
+                    <ul>
+                        <li class="on"><b class="b1"></b><span>我的购物车</span></li>
+                        <li><i></i><b class="b2"></b><span>填写订单信息</span></li>
+                        <li><i></i><b class="b3"></b><span>成功提交订单</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  <!-- <div class="cart"> -->
+    <!-- <div class="wrap"> -->
+           <!-- 购物车空
+            <div class="cart-none" style="display:block;">
+                <p>
+              <b>购物车是空的，去买点东西吧！<a href="http://www.yiguo.com">继续逛逛&gt;&gt;</a></b>
+                        <br>您还尚未<a href="https://login.yiguo.com/Login?Url=http://cart.yiguo.com/">登录</a>
+                </p>
+             </div>
+        <!--特惠换购-->
+        <!-- <div class="preferential-buy"> -->
+
+
+
+        <!-- </div> -->
+<!-- </div> -->
+
+
+    <div class="cart">
+    <div class="wrap">
+            <h2>
+                我的购物车
+
+
+
+<div class="city clearfix">
+    <div class="city-sz"><i></i>配送至：</div>
+    <div class="city-tit">
+        <a class="city-name" href="#">成都市<s></s></a>
+
+              <a class="on-shopping" href="#">继续购物 &gt; &gt;</a>
+
+
+
+
+    </div>
+</h2>
+<div class="cart-alert">
+    <div class="cart-header">
+        <table class="cart-table" text-align="center">
+            <tbody>
+                <tr>
+                    <th class="cart-t-check"><lable><input type="checkbox" checked="checked" class="chkAll">全选</lable></th>
+                    <th class="cart-t-info">商品信息</th>
+                    <th class="car-t-ub">悠币</th>
+                    <th class="cart-t-price">单价</th>
+                    <th class="cart-t-num">购买数量</th>
+                    <th class="cart-t-total">合计</th>
+                    <th class="cart-t-spec">规格</th>
+                    <th class="cart-t-opera">操作</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="cart-list" id="shopCar">
+        <table class="cart-table">
+            <tbody>
+
+{volist name="res" id="vo"}
+
+
+
+
+                <tr>
+                    <td class="cart-t-check"><input type="checkbox" checked="checked"></td>
+                    <td class="cart-t-img"><a href=""><img src="__FRON__imgs/{$vo.imgs}" alt="图片加载失败"></a></td>
+                    <td class="cart-t-info"><a href="#">{$vo.cont}</a></td>
+                    <td class="car-t-ub"></td>
+                    <td class="cart-t-price">{$vo.danjia}</td>
+                    <td class="cart-t-num"><div class="quantity-from">
+                        <a href="#" class="btn btn-default btn-xs" >-</a>
+                        <input type="text" class="itxt" oldnum="1" value="1" style="width: 30px;height: 20px">
+                        <a href="#" class="btn btn-default btn-xs">+</a>
+                    </div></td>
+                    <td class="cart-t-total">￥<span>{$vo.danjia }</span></td>
+                    <td class="cart-t-spec">{$vo.guige}</td>
+                    <td class="cart-t-opera">
+                         <a href="#">移入收藏</a>
+                            <br>
+                            <a href="#">删除</a>
+
+                    </td>
+                </tr>
+    {/volist}
+            </tbody>
+        </table>
+</div>
+</div>
+    <div class="settle-space"></div>
+                    <div class="cart-footer clearfix settle">
+                        <div class="wrap">
+                            <div class="fl">
+                                <label><input type="checkbox" checked="checked" class="chkAll">全选</label>
+                                <a href="###" onclick="G.app.CartController.RemoveMultiCommodity()"><i></i>删除选中的商品</a>
+                                <a href="###" onclick="G.app.CartController.ClearAll()">清空购物车</a>
+
+
+                            </div>
+                            <div class="fr" id="fr">
+
+                                   <span class="ub">悠币：<em>0</em>个</span>
+                                    <span class="fs14">总价：<em>￥<span>55.90</span></em></span>
+                                    <input id="SelectedCommIds" name="SelectedCommIds" type="hidden" value="" />
+
+                                    <a href="./Order.html" class="btn" id="btnSubmit" name="btnSubmit" style="cursor:pointer;">去结算</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+</div>
+
+
+
+<style>
+     i{background-image:none;}
+</style>
+<div class="footer">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="#">账户注册</a></p>
+                <p><a href="#">购物流程</a></p>
+                <p><a href="#">订购方式</a></p>
+                <p><a href="#">悠币说明</a></p>
+                            <p><a href="#">会员等级<i class="ml5"><img src="__FRON__imgs/icon-new.png"></i></a></p>
+
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="#">支付方式</a>/<a href="#">发票说明</a></p>
+                <p><a href="#">充值说明</a><a href="#">/储值卡说明</a></p>
+                <p><a href="#">优惠代码/礼品卡说明</a></p>
+                <p><a href="#">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="#">配送运费</a></p>
+                <p><a href="#">配送范围</a></p>
+                <p><a href="#">配送时间</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="#">退换货政策</a></p>
+                <p><a href="#">退换货流程</a></p>
+                <p><a href="#l">常见问题</a></p>
+                <p><a href="#">投诉与建议</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">业务合作</a></p>
+                <p><a href="#">诚信举报</a></p>
+                <p><a href="#" target="_blank" rel="nofollow">人才招聘</a></p>
+            </dd>
+        </dl>
+        <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+        <div class="copyright">
+            <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+            <p>沪ICP备09008015号 Copyright © 2005-2015 <a href="#">上海易果电子商务有限公司</a>版权所有</p>
+            <p class="authentication">
+                <a href="#" target="_blank" rel="nofollow"><img src="__FRON__imgs/153685368061665897_121x29.png" style="height:29px;"></a>
+                <a href="#" target="_blank"><img src="__FRON__imgs/footer_copy.gif" width="47px" height="47px"></a>
+                <a href="#">
+                    <img src="__FRON__imgs/picp_bg.png" height="47" alt="图片加载失败..." border="0">
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>

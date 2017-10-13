@@ -1,0 +1,431 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    border: none;
+    background: #e0e0e0;
+    height: 70px;
+    width:100%;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    background-color: #ffffff;
+}
+body, input, textarea {
+    font-size: 12px;
+    font-family: Arial,Verdana,"\5b8b\4f53";
+}
+
+.header .wrap {
+    padding: 15px 0 5px 0;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    float: left;
+}
+
+.logo a {
+    width: 195px;
+    height: 50px;
+    background: url(../imgs/logo.png) no-repeat;
+    display: block;
+}
+
+.logo .h-tit {
+    color: #008842;
+    left: 240px;
+    font: 28px/1 Microsoft YaHei;
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+
+}
+
+.popout {
+    display: none;
+    position: fixed;
+    z-index: 200000;
+    left: 0;
+    top: 0;
+}
+
+.tabbable .right {
+    position: absolute;
+    top: -27px;
+    right: 0;
+    font: 14px/1 "Microsoft YaHei";
+}
+
+.right {
+    text-align: right;
+}
+
+.tabbable .right .orange {
+    margin-right: 36px;
+    color: #ef760a;
+    text-decoration: underline;
+}
+
+.register {
+    padding-top: 54px;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tabbable {
+    position: relative;
+    width: 100%;
+    margin: 10px auto 0;
+
+}
+
+.register .tab-content .tab-pane {
+    border: 1px solid #c4dfb1;
+    background-color: #fff;
+    padding: 40px 0 50px;
+}
+
+.tab-content .active {
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.register .fr {
+    position: relative;
+    height: 340px;
+    width: 330px;
+    text-align: center;
+    padding-top: 50px;
+    font: 14px/56px "Microsoft YaHei";
+}
+.fr {
+    float: right;
+}
+
+.register p, .forget-pwd p {
+    margin-bottom: 29px;
+    font: 14px Arial,"Microsoft YaHei";
+}
+
+.register .field-name {
+    display: inline-block;
+    width: 220px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.register .input {
+    margin-right: 20px;
+}
+.login .input-yzm, .register .input-yzm {
+    width: 147px;
+}
+.login .input, .register .input, .forget-pwd .input {
+    border: 1px solid #c1c1c1;
+    background-color: #fff;
+    height: 38px;
+    vertical-align: middle;
+    padding-left: 14px;
+    width: 290px;
+    font: 14px/38px "Microsoft YaHei";
+}
+
+.gray {
+    color: #666666;
+}
+
+.input-phone {
+    background-position: 276px -30px;
+}
+
+.input-phone, .input-mail, .input-key {
+    background-image: url(../imgs/bg_input.png);
+    background-repeat: no-repeat;
+}
+
+.login .input-yzm, .register .input-yzm {
+    width: 147px;
+}
+.btn-yzm {
+    display: inline-block;
+    width: 121px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #f7f7f7;
+    border: 1px solid #c1c1c1;
+    color: #008842;
+    margin-right: 20px;
+}
+
+.input-key {
+    background-position: 276px -70px;
+}
+
+input[type=checkbox] {
+    margin-right: 9px;
+    height: 14px;
+    width: 14px;
+    vertical-align: -1px;
+}
+
+.btn-green-l, .btn-green-s, .btn-orange-s {
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font: 18px/50px "Microsoft YaHei";
+}
+
+
+.btn-green-l, .btn-green-s {
+    background: #008842;
+}
+
+.btn-green-l {
+    width: 306px;
+}
+
+.register .fr .rimg {
+    position: absolute;
+    left: -140px;
+    top: 70px;
+}
+
+.register .tab-content .tab-pane {
+    border: 1px solid #c4dfb1;
+    background-color: #fff;
+    padding: 40px 0 50px;
+}
+
+.clearfix:after, .wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.green{
+    color: #008842;
+}
+
+.footer {
+    zoom: 1;
+    clear: both;
+    position: relative;
+    /*border-top: 2px solid #e0e0e0;*/
+    padding-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    height: 400px;
+    margin-top: 30px
+}
+
+.footer .wrap {
+    margin: 50px auto 0;
+    padding-top: 30px;
+}
+.wrap {
+    width: 1200px;
+}
+
+.footer dl {
+    width: 190px;
+    float: left;
+    margin-left: 50px;
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul, ol, dl, dt, dd {
+    list-style-type: none;
+}
+
+dl {
+    /*display: block;*/
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.footer .col1 dt {
+    background-position: 0 0;
+}
+.footer dl dt {
+    height: 23px;
+    line-height: 23px;
+    background: url(../imgs/footer_icon.png) no-repeat;
+    font-size: 14px;
+    text-indent: 40px;
+}
+
+.footer dl dd {
+    border-left: 1px dashed #A8A8A8;
+    padding-left: 20px;
+    height: 110px;
+    min-height: 110px;
+    margin: 15px 0 0 13px;
+}
+
+dd {
+    display: block;
+    -webkit-margin-start: 40px;
+}
+
+.footer dl dd a {
+    color: #575556;
+    line-height: 22px;
+}
+
+.footer .col2 dt {
+    background-position: 0 -23px;
+}
+
+.footer .col3 dt {
+    background-position: 0 -46px;
+}
+
+.footer .col4 dt {
+    background-position: 0 -69px;
+}
+.footer .col5 dt {
+    background-position: 0 -92px;
+}
+
+.footer .service {
+    clear: both;
+    text-align: center;
+    padding: 60px 0 20px;
+    color: #008842;
+    font-size: 14px;
+}
+
+.footer .service span {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.footer .copyright {
+    clear: both;
+    color: #717171;
+    text-align: center;
+    line-height: 22px;
+}
+
+.footer .copyright a {
+    color: #717171;
+}
+.footer .authentication a {
+    display: inline-block;
+    position: relative;
+    height: 45px;
+    margin: 0 10px;
+    zoom: 1;
+}
+.footer .authentication span {
+    font-size: 12px;
+    color: #001b75;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    top: 25px;
+    left: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.footer .authentication img {
+    height: 47px;
+}
+
+.pass-error {
+    color: #f60000;
+}
+
+.register i {
+    background-image: url(../imgs/bg_login.png);
+    background-repeat: no-repeat;
+}
+
+.pass-succ i, .pass-tip i, .pass-error i{
+
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+    margin-right: 9px;
+
+}
+
+.pass-error i {
+    background-position: -40px -200px;
+}
+
+.pass-tip i {
+    background-position: -20px -200px;
+}
+
+.pass-succ i {
+    background-position: 0 -200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

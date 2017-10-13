@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__FRON__css/load.css">
+
+</head>
+<body>
+<!------- 顶部工具栏开始 ------->
+
+<div class="w">
+
+    <!------- 顶部工具栏结束 ------->
+
+
+    <div class="popout protocol-poput" id="p-code">
+        <div class="popout-code">
+            <a href="javascript:;" class="close"></a>
+            <p>亲，第三方登录目前仅支持移动端，请拿起手机扫描以下二维码下载易果生鲜APP或关注微信服务号吧！</p>
+            <div class="pcode"><img src="http://img07.yiguoimg.com/e/web/161205/01855/150158/code.jpg" /></div>
+        </div>
+        <div class="popout-bg">&nbsp;</div>
+    </div>
+
+    <div class="header clearfix">
+        <div class="wrap">
+            <div class="logo">
+                <a href="http://www.yiguo.com" target="_blank"></a>
+                <span class="h-tit">登录</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <form action="__PUBLIC__/index/wms/loadif" method="post">    <div class="login">
+        <div class="wrap clearfix">
+            <div class="fl"><a href='http://www.yiguo.com/' target='_blank'><img width='666' height='418' src='http://img05.yiguoimg.com/e/others/151217/9288691196862353.jpg'></a></div>
+            <div class="fr">
+                <p class="right"></p>
+                <div class="login-main">
+                    <p><strong>欢迎登录</strong><span>还没有账号？<a class="green" href="/Register">立即注册</a></span></p>
+
+                    <div id="msg-wrap"></div>
+
+                    <p>
+                        <span class="input-phone-icon">&nbsp;</span><input class="input input-phone" id="UserName" name="UserName" placeholder="邮箱/账号/已验证手机" type="text" value="" />
+                    </p>
+                    <p><span class="input-key-icon">&nbsp;</span><input class="input input-key" id="Pwd" name="Pwd" placeholder="密码" type="password" /></p>
+                    <p><input class="input input-key" id="VerifyCode" name="VerifyCode" placeholder="验证码" style="width:100px" type="text" value="" /><img id="gd1" src='__PUBLIC__/index/wms/yzm' /><a href="JavaScript:void(0);" class="gray">换一张</a></p>
+                    <p><label><input data-val="true" data-val-required="自动登录 字段是必需的。" id="UserNameRemeber" name="UserNameRemeber" type="checkbox" value="true" /><input name="UserNameRemeber" type="hidden" value="false" /> 自动登录</label><span> <a class="gray" href="/FindPwd">忘记登录密码？</a>   </span></p>
+                    <p><a id="btnLogin" class="btn-green-l" href="javascript:void(0);">登 &#160; 录</a></p>
+                    <p>第三方登录</p>
+                    <!--<div><a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&amp;client_id=100270138&amp;redirect_uri=https://login.yiguo.com/QQ/Login" class="qq"><i></i></a><a href="https://api.weibo.com/oauth2/authorize?client_id=62745858&amp;redirect_uri=https://login.yiguo.com/Weibo/Login&amp;response_type=code&amp;display=default" class="sina"><i></i></a><a href="/SQ" class="ay"><i></i></a></div>-->
+                    <div id="p-code-btn"><a href="javascript:;" class="qq"><i></i></a><a href="javascript:;" class="sina"><i></i></a><a href="https://login.yiguo.com/SQ" target="_blank" class="ay"><i></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <!------- 页尾开始 ------->
+    <div class="footer">
+        <div class="wrap">
+            <dl class="col1">
+                <dt>新手指南</dt>
+                <dd>
+                    <p><a href="http://www.yiguo.com/help/registersteps.html">账户注册</a></p>
+                    <p><a href="http://www.yiguo.com/help/gouwuliucheng.html">购物流程</a></p>
+                    <p><a href="http://www.yiguo.com/help/ordering.html">订购方式</a></p>
+                    <p><a href="http://www.yiguo.com/help/ubremark.html">悠币说明</a></p>
+                    <p><a href="http://www.yiguo.com/activity/sale/2999">会员等级</a></p>
+
+                </dd>
+            </dl>
+            <dl class="col2">
+                <dt>付款方式</dt>
+                <dd>
+                    <p><a href="http://www.yiguo.com/help/payment.html">支付方式</a>/<a href="http://www.yiguo.com/help/invoiceremark.html">发票说明</a></p>
+                    <p><a href="http://www.yiguo.com/help/chongzhiliucheng.html">充值说明</a>/<a href="http://www.yiguo.com/help/usechuzhika.html">储值卡说明</a></p>
+                    <p><a href="http://www.yiguo.com/help/usegiftcard.html">优惠代码/礼品卡说明</a></p>
+                    <p><a href="http://www.yiguo.com/help/cardbuynotes.html">卡券购买章程</a></p>
+                </dd>
+            </dl>
+            <dl class="col3">
+                <dt>配送方式</dt>
+                <dd>
+                    <p><a href="http://www.yiguo.com/help/sendyuefei.html">配送运费</a></p>
+                    <p><a href="http://www.yiguo.com/help/sendquyu.html">配送范围</a></p>
+                    <p><a href="http://www.yiguo.com/help/sendtime.html">配送时间</a></p>
+                </dd>
+            </dl>
+            <dl class="col4">
+                <dt>售后服务</dt>
+                <dd>
+                    <p><a href="http://www.yiguo.com/help/tuihuanhuoshuoming.html">退换货政策</a></p>
+                    <p><a href="http://www.yiguo.com/help/huanhuolc.html">退换货流程</a></p>
+                    <p><a href="http://www.yiguo.com/help/qa.html">常见问题</a></p>
+                    <p><a href="http://home.yiguo.com/Trade/Advice">投诉与建议</a></p>
+                </dd>
+            </dl>
+            <dl class="col5">
+                <dt>关于我们</dt>
+                <dd>
+                    <p><a href="http://www.yiguo.com/help/introduction.html">公司介绍</a></p>
+                    <p><a href="http://www.yiguo.com/help/contact.html">联系我们</a></p>
+                    <p><a href="http://www.yiguo.com/help/procooperation.html">业务合作</a></p>
+                    <p><a href="http://www.yiguo.com/help/chengxinjubao.html">诚信举报</a></p>
+                    <p><a href="http://yiguo.zhiye.com/home" target="_blank" rel="nofollow">人才招聘</a></p>
+
+
+                </dd>
+            </dl>
+            <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+            <div class="copyright">
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p>沪ICP备09008015号 Copyright © 2005-2017 <a href="http://www.yiguo.com/">上海易果电子商务有限公司</a>版权所有</p>
+                <p class="authentication">
+                    <a href="http://www.yiguo.com/legal" target="_blank" rel="nofollow"><img src="http://img09.yiguoimg.com/e/albums/2017/170309/153685368061665897_121x29.png" style="height:29px;"></a>
+                    <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110512114405424" target="_blank"><img src="http://img03.yiguo.com/images/footer_copy.gif" width="47px" height="47px"></a>
+                    <a href="https://180.169.127.46:9090/?sn=310100102001">
+                        <img src="http://img02.yiguo.com/e/web/150623/00841/170532/picp_bg.png" alt="»¦¹«θ±¸" border="0">
+                        <span>310100102001</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!------- 页尾结束 ------->
+
+</div>
+
+
+
+
+
+</body>
+<script type="text/javascript" src="__FRON__js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__FRON__js/load.js"></script>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>结算-易果网</title>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="__FRON__js/jquery-3.2.1.min.js"></script>
+        <script src="__FRON__js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
+        <link rel="stylesheet" type="text/css" href="__FRON__css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="__FRON__css/order.css">
+    </head>
+    <body id="body">
+
+     <div class="w">
+
+ <!-- 顶部工具栏  -->
+ <div class="site-nav">
+    <div class="wrap">
+        <ul class="fl">
+            <li>欢迎光临易果生鲜！</li>
+        </ul>
+             <ul class="fr">
+
+            <li class="myyiguo">
+                <div class="tit"><a href="#" target="_blank"><i class=" glyphicon glyphicon-user"></i>我的易果<s></s></a></div>
+                <div class="con">
+                    <a href="#">我的订单</a>
+                    <a href="#">退出</a>
+                </div>
+            </li>
+                <li><a href="#">[注册]</a></li><li><a href="#">[登录]</a></li>
+
+        </ul>
+
+    </div>
+    </div>
+        <div class="header clearfix">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="#" target="_blank"></a>
+
+                </div>
+
+                <div class="steps">
+                    <ul>
+                        <li class="on"><b class="b1"></b><span>我的购物车</span></li>
+                        <li class="on"><i></i><b class="b2"></b><span>确认订单信息</span></li>
+                        <li><i></i><b class="b3"></b><span>成功提交订单</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+    <div class="order">
+    <div class="wrap">
+        <h2>填写核对订单信息</h2>
+        <div class="order-alert">
+            <!--收货信息-->
+            <div id="order1" class="order-mode complete">
+                <h3><i class="o-i-receive"></i>收货信息</h3>
+                <div class="o-receive">
+                    <div>
+                        <ul id="receive1"></ul>
+                        <li>
+
+                        <label class=""><input type="radio" name="receive">
+                        <span class="adrtag">家庭</span>
+                        <strong>大</strong>
+                        <span>上海(郊区) 崇明县 是 ，15115151457 </span>
+                        <span style="display:none;" class="orange">此地址尚不支持配送，请选择其他地址</span>
+                        <a href="###" class="btn-setdefault">设为默认地址</a>
+                        <a data-toggle="modal" href="#myModal1" data-backdrop="static" class="btn-edit">编辑</a>
+                        <a href="###" class="btn-del">删除</a>
+                        <b></b>
+
+                        </label>
+                        </li>
+                        <a id="receive3" href="###" class="link oReceiveClose" style="display:none;">展开其他地址</a>
+                        <a data-toggle="modal" href="#myModal1" data-backdrop="static" class="link" id="theAddress" style="cursor:pointer;"><i></i>使用新地址</a>
+                    </div>
+
+    <div id="customDelivery" style="display:none">
+    <a class="link selectedConsignee" style="cursor:pointer; display:none">选择配送地址</a>
+    <div class="pickup">
+        <h4>到自提点自取</h4>
+        <ul class="pickup-addr"></ul>
+        <div class="consignee-info">
+            <span>提货人：<input id="" type="text" class="input" name="Custom-ConsigneeName"></span>
+            <span>电话：<input id="" type="text" class="input" name="Custom-ConsigneePhone"></span>
+        </div>
+        <div class="pickup-agree"><input type="checkbox" checked>我已阅读并同意<a data-toggle="modal" data-backdrop="static" href="#myModal3" class="selected" style="text-decoration: underline;">《易果生鲜自提服务协议》</a></div>
+    </div>
+</div>
+
+                </div>
+
+            </div>
+            <!--配送信息-->
+            <div id="order2" class="order-mode complete">
+                <h3><i class="o-i-delivery"></i>配送信息</h3>
+                <div class="o-delivery">
+                    <div style="color:red;">请选择有效的收货信息后确认配送信息！</div>
+
+                </div>
+            </div>
+     <!--支付信息-->
+            <div id="order3" class="order-mode on">
+                <h3><i class="o-i-payment"></i>支付信息</h3>
+                <div class="o-payment">
+                    <div style="color:red;">请选择有效的收货信息后确认支付方式！</div>
+
+                </div>
+            </div>
+
+         <div id="order4" class="order-mode">
+                <h3>
+                    <i class="o-i-invoice"></i>发票信息
+                                    </h3>
+                <div class="o-invoice">
+
+
+<label>
+    <input type="checkbox" style="cursor:pointer;">需要发票
+    <div class="promptbox">
+    <span>温馨提示</span>
+        <div class="dorpdown">
+            <i class="up"></i>
+            <p class="center"><b>温馨提示</b></p>
+            <p>尊敬的顾客：</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按照国家有关税收法律法规，在您购买应税货物或接受应税服务的同时，有权索取增值税发票。
+                如您为自然人以外的单位或个体工商户，符合规定条件的,索取增值税专用发票时，应向我们提供购买方名称、纳税人识别号、地址电话、开户行及账号信息等四项信息，不需相关证件或其他证明材料。
+                您在索取增值税普通发票时，不需提供相关证件或其他证明材料。
+            </p>
+            <p class="mt10">欢迎您对我们的工作进行监督。</p>
+            <p>主管税务机关投诉举报电话：&nbsp;&nbsp;&nbsp;12366</p>
+        </div>
+    </div>
+</label>
+
+
+</div>
+</div>
+  <!--商品信息-->
+            <div id="order5" class="order-mode">
+                <h3>
+                    <i class="o-i-commodity"></i>商品信息
+                    <a class="backcart" href="#">返回购物车&gt;&gt;</a>
+                </h3>
+                <div class="o-commodity">
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th width="590">商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>规格</th>
+            <th>金额小计</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td><a target="_blank" href="#">俏侬可可卡仕达(速冻泡芙馅)400g</a>
+                    <p class="gray2">不支持7天无理由退货</p>
+
+                </td>
+                <td>￥15.80</td>
+                <td>1</td>
+                <td>400g/袋</td>
+                <td>￥15.80</td>
+            </tr>
+    </tbody>
+</table>
+<div class="mt10 clearfix">
+    <div class="fl">补充说明：<input id="txtWebRemark" type="text" placeholder="选填，补填要求"></div>
+    <input type="hidden" id="hascard" value="0" />
+    <input type="hidden" id="hasNormalCommodity" value="1" />
+
+</div>
+</div>
+</div>
+<div id="orderPlus" class="order-mode-last">
+                <h3><i class="o-i-order"></i>订货人信息</h3>
+                <div class="o-order">
+                    <div>订货人姓名：<input id="OrderUserName" type="text" class="input" placeholder="非必填" maxlength="20"></div>
+                    <div>订货人手机：<input id="OrderUserMobile" type="text" class="input" placeholder="非必填" maxlength="15"></div>
+                </div>
+            </div>
+            <div id="order7" class="statistic">
+                <p class="right">商品金额：￥<span>0.00</span></p>
+                <p class="right">运费：￥<span>0.00</span></p>
+            </div>
+            <div class="settle-space"></div>
+
+            <div id="order71" class="cart-footer clearfix settle">
+                <div class="wrap">
+                    <div class="righ">
+                        <span class="fs14">应付款：<em>￥</em><em>0.00</em></span>
+                        <a id="btnOrderSubmit" href="###" class="btn">提交订单</a>
+                    </div>
+                </div>
+            </div>
+
+<div class="modal fade in" id="myModal1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3><i class="i-newaddr"></i>使用新地址</h3>
+    </div>
+    <div class="modal-body">
+
+        <form id="theAddressForm" name="theAddressForm" method="post" novalidate="novalidate">
+            <div class="control-group">
+                <label class="control-label" for="textarea">收货人姓名：</label>
+                <div class="controls">
+                    <input type="hidden" name="ConsigneeId" id="ConsigneeId" value="">
+                    <input type="text" class="input-l" name="ConsigneeName" id="ConsigneeName">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea">手机号码：</label>
+                <div class="controls">
+                    <input id="ConsigneeMobile" name="ConsigneeMobile" type="text" class="input-l" placeholder="">
+                    <input id="OrigonMobile" name="OrigonMobile" type="text" class="input-l" placeholder="" hidden="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea">收货地址：</label>
+                <div class="controls">
+                    <select id="ProvinceId" name="ProvinceId"><option value="">选择</option>
+                    <select id="AreaId" name="AreaId"></select>
+                    <select id="DistrictId" name="DistrictId"></select>
+                    <input type="hidden" id="IsOuterLoop" name="IsOuterLoop" value="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea">详细地址：</label>
+                <div class="controls"><input id="ConsigneeAddress" name="ConsigneeAddress" type="text" class="input-xl"></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea">固定电话：</label>
+                <div class="controls">
+                    <input id="ConsigneeTel" name="ConsigneeTel" type="text" class="input-l" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea">邮政编码：</label>
+                <div class="controls"><input id="PostCode" name="PostCode" type="text" class="input-m"></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea"></label>
+                <div class="controls"><label class="adrtag" data-type="2">家庭地址<b></b></label><label class="adrtag" data-type="1">公司地址<b></b></label><input id="ConsigneeType" name="ConsigneeType" type="hidden" value=""></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="textarea"></label>
+                <div class="controls">
+                    <input id="btnSaveConsignee" type="submit" class="btn-save" value="保存" style="cursor:pointer;">
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="#">账户注册</a></p>
+                <p><a href="#">购物流程</a></p>
+                <p><a href="#">订购方式</a></p>
+                <p><a href="#">悠币说明</a></p>
+                            <p><a href="#">会员等级<i class="ml5"><img src="__FRON__imgs/icon-new.png"></i></a></p>
+
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="#">支付方式</a>/<a href="#">发票说明</a></p>
+                <p><a href="#">充值说明</a><a href="#">/储值卡说明</a></p>
+                <p><a href="#">优惠代码/礼品卡说明</a></p>
+                <p><a href="#">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="#">配送运费</a></p>
+                <p><a href="#">配送范围</a></p>
+                <p><a href="#">配送时间</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="#">退换货政策</a></p>
+                <p><a href="#">退换货流程</a></p>
+                <p><a href="#l">常见问题</a></p>
+                <p><a href="#">投诉与建议</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">业务合作</a></p>
+                <p><a href="#">诚信举报</a></p>
+                <p><a href="#" target="_blank" rel="nofollow">人才招聘</a></p>
+            </dd>
+        </dl>
+        <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+        <div class="copyright">
+            <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+            <p>沪ICP备09008015号 Copyright © 2005-2015 <a href="#">上海易果电子商务有限公司</a>版权所有</p>
+            <p class="authentication">
+                <a href="#" target="_blank" rel="nofollow"><img src="__FRON__imgs/153685368061665897_121x29.png" style="height:29px;"></a>
+                <a href="#" target="_blank"><img src="__FRON__imgs/footer_copy.gif" width="47px" height="47px"></a>
+                <a href="#">
+                    <img src="__FRON__imgs/picp_bg.png" height="47" alt="图片加载失败..." border="0">
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
